@@ -19,7 +19,8 @@
     <br>
     <br>
     <button id="suma" onclick="suma()"> SUMA (+) </button>
-    <h1>RESULTADO:</h1> <input id="ResultadoSuma"></input>
+    <button id="resta" onclick="suma()"> RESTA (-) </button>
+    <h1>RESULTADO:</h1> <input id="Resultado"></input>
 
     <script>
         console.log("ejecutando código JS!!!")
@@ -32,7 +33,7 @@
 
             const valorA = document.getElementById("numeroA").value;
             const valorB = document.getElementById("numeroB").value;
-            let CampoResultado = document.getElementById("ResultadoSuma");
+            let CampoResultado = document.getElementById("Resultado");
 
             
             if(!valorA || !valorB){
@@ -48,6 +49,8 @@
                 console.log("Resultado =>", CampoResultado.value);
             }
             
+
+
             // if(!valueB){
             //     console.log("valor B es null o vacío", valorB);
             //     CampoResultado.value = "Ingrese datos => número A";
@@ -62,6 +65,31 @@
             // CampoResultado.value = RESULTADO
 
             // document.getElementById("resultadoSuma").value = RESULTADO
+
+        }
+        
+        // Esta función permite ejecutar la función de restar
+
+        function resta (){
+            console.log("Iniciando resta");
+
+            const valorA = document.getElementById("numeroA").value;
+            const valorB = document.getElementById("numeroB").value;
+            let CampoResultado = document.getElementById("Resultado");
+
+            
+            if(!valorA || !valorB){
+                console.log("valor A o B es null o vacío (sin datos)", valorA);
+                CampoResultado.value = "Faltan Datos";
+            }
+
+            if(valorA && valorB){
+                console.log("Procesando resultado");
+                console.log("Valor A =>", valorA);
+                console.log("Valor B =>", valorB);
+                CampoResultado.value = Number(valorA) - Number(valorB);                
+                console.log("Resultado =>", CampoResultado.value);
+            }
 
         }
     </script>
