@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CALCULADORA</h1>
+
+    <br>
+    <input id="numeroA"> Número A </input>
+    <br>
+    <br>
+    <br>
+    <input id="numeroB"> Número B </input>
+    <br>
+    <br>
+    <br>
+    <button id="suma" onclick="suma()"> SUMA (+) </button>
+    <h1>RESULTADO:</h1> <input id="ResultadoSuma"></input>
+
+    <script>
+        console.log("ejecutando código JS!!!")
+
+        // const valorA = document.getElementById("numeroA").value
+        // console.lg("Valor A =>",valorA)
+
+        function suma(){
+            console.log("Iniciando suma");
+
+            const valorA = document.getElementById("numeroA").value;
+            const valorB = document.getElementById("numeroB").value;
+            let CampoResultado = document.getElementById("ResultadoSuma");
+
+            
+            if(!valorA || !valorB){
+                console.log("valor A o B es null o vacío (sin datos)", valorA);
+                CampoResultado.value = "Faltan Datos";
+            }
+
+            if(valorA && valorB){
+                console.log("Procesando resultado");
+                console.log("Valor A =>", valorA);
+                console.log("Valor B =>", valorB);
+                CampoResultado.value = Number(valorA) + Number(valorB);                
+                console.log("Resultado =>", CampoResultado.value);
+            }
+            
+            // if(!valueB){
+            //     console.log("valor B es null o vacío", valorB);
+            //     CampoResultado.value = "Ingrese datos => número A";
+            // }
+
+            
+
+            // console.log("Resultado =>", RESULTADO);
+
+            // let CampoResultado = document.getElementById("ResultadoSuma");
+
+            // CampoResultado.value = RESULTADO
+
+            // document.getElementById("resultadoSuma").value = RESULTADO
+
+        }
+    </script>
+
+
+</body>
+</html>
